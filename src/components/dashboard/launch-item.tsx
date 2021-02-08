@@ -1,15 +1,15 @@
-import React from "react";
-import { ListItem, Card, CardActionArea, CardContent } from "@material-ui/core";
-import { useNavigate } from "@reach/router";
-import styled from "styled-components";
-import format from "date-fns/format";
+import React from 'react';
+import { ListItem, Card, CardActionArea, CardContent } from '@material-ui/core';
+import styled from 'styled-components';
+import format from 'date-fns/format';
 
-import BoldTypography from "../common/bold-typography";
+import BoldTypography from '../common/bold-typography';
 
-import { Launch } from "./types";
+import { Launch } from './types';
 
 interface LaunchItemProps {
   launch: Launch;
+  onClick: (path: string) => void;
 }
 
 const StyledCard = styled(Card)`
@@ -24,10 +24,9 @@ const DateFooter = styled.div`
   margin-top: 5px;
 `;
 
-const LaunchItem: React.FC<LaunchItemProps> = ({ launch }) => {
-  const navigate = useNavigate();
+const LaunchItem: React.FC<LaunchItemProps> = ({ launch, onClick }) => {
   const handleClick = () => {
-    navigate(`/launch/${launch.id}`);
+    onClick(`launch/${launch.id}`);
   };
 
   return (
@@ -38,9 +37,9 @@ const LaunchItem: React.FC<LaunchItemProps> = ({ launch }) => {
             <BoldTypography variant="h5" gutterBottom>
               {launch.mission_name}
             </BoldTypography>
-            <p>{launch.details || "No details provided"}</p>
+            <p>{launch.details || 'No details provided'}</p>
             <DateFooter>
-              {format(Number(launch?.launch_date_unix) * 1000, "dd/MM/yyy")}
+              {format(launch?.launch_date_unix * 1000, 'dd/MM/yyy')}
             </DateFooter>
           </CardContent>
         </CardActionArea>

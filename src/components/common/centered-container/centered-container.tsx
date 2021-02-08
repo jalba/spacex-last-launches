@@ -1,9 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const CenteredContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
-  margin-top: ${(props) => props.theme.containerTop};
+  position: relative;
+  top: 10vh;
 `;
 
 export default CenteredContainer;
