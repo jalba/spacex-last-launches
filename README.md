@@ -1,8 +1,13 @@
-# Getting Started with Create React App
+# SpaceX Last Launches
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Installing the app
+
+just run `npm install` or `yarn install`
+
+
+## Running the app
 
 In the project directory, you can run:
 
@@ -11,36 +16,29 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
 ### `yarn test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Stack choices
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Besides the required tech (React, GraphQL, Apollo client, etc), the rest of the stack is comprised by very standard libraries that are part of the React ecosystem. And that is mainly why I chose them, besides the fact they make me more productive because I have experience with them. The are, more or less, the following:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Styled components: my preferred flavour of css-in-js, as with this library you are actually righting css and not weird camel case  properties. Also, I really like the compositional HOC pattern
 
-### `yarn eject`
+- Material-ui: Great way to get used to working with a design system and a shared components library. 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Date-fns: great library to work with dates. So far, the best one I've used, and far better than having to parse the date object "by hand"
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## With a bit more time
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- First I think I might try to add more tests. The ones in the application now are a bit basic and it could definitely use some that test more complex interactions and edge cases. It would also be great to add some end-to-end testing for those interactions. I really enjoy working with Cypress
 
-## Learn More
+- I would learn more about GraphQL to be more confident in the patterns I used to handle the data
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Review more thoroughly the code to see if I've abstracted everything I can into common components or utility functions,to make the code as DRY as possible
 
-To learn React, check out the [React documentation](https://reactjs.org/).
