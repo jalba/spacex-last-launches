@@ -7,7 +7,7 @@ const IndicatorContainer = styled.div`
   position: relative;
 `;
 
-const LoadingIndicator: React.FC<{}> = () => (
+const LoadingIndicator: React.FC = () => (
   <IndicatorContainer>
     <CircularProgress size={80} title="loading" />
   </IndicatorContainer>

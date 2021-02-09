@@ -1,8 +1,8 @@
-import React, { ReactNode } from "react";
-import { ApolloError } from "@apollo/client";
+import React, { ReactNode } from 'react';
+import { ApolloError } from '@apollo/client';
 
-import LoadingIndicator from "../loading-indicator";
-import Error from "../error";
+import LoadingIndicator from '../loading-indicator';
+import Error from '../error';
 
 interface ManagedStateProps {
   loading: boolean;
@@ -13,7 +13,7 @@ interface ManagedStateProps {
 const ManagedState: React.FC<ManagedStateProps> = ({
   loading,
   error,
-  children,
+  children
 }) => {
   if (loading) {
     return <LoadingIndicator />;

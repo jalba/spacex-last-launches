@@ -1,13 +1,13 @@
-import React from "react";
-import { RouteComponentProps } from "@reach/router";
-import { gql, useQuery } from "@apollo/client";
-import styled from "styled-components";
+import React from 'react';
+import { RouteComponentProps } from '@reach/router';
+import { gql, useQuery } from '@apollo/client';
+import styled from 'styled-components';
 
-import CenteredContainer from "../common/centered-container";
-import ManagedState from "../common/managed-state";
-import Launch from "./launch";
+import CenteredContainer from '../common/centered-container';
+import ManagedState from '../common/managed-state';
+import Launch from './launch';
 
-import { LaunchData } from "./types";
+import { LaunchData } from './types';
 
 interface LaunchContainerProps extends RouteComponentProps {
   launchId?: number;
@@ -40,7 +40,7 @@ const LaunchContainer: React.FC<LaunchContainerProps> = ({ launchId }) => {
   const { error, loading, data } = useQuery<LaunchData, LaunchVariables>(
     GET_LAUNCH,
     {
-      variables: { id: launchId },
+      variables: { id: launchId }
     }
   );
 

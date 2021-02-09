@@ -1,7 +1,7 @@
-import React from "react";
-import { Typography } from "@material-ui/core";
-import ImageIcon from "@material-ui/icons/Image";
-import styled from "styled-components";
+import React from 'react';
+import { Typography } from '@material-ui/core';
+import ImageIcon from '@material-ui/icons/Image';
+import styled from 'styled-components';
 
 interface ImageViewerProps {
   src?: string | null;

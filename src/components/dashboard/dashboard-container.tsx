@@ -10,8 +10,6 @@ import Dashboard from './dashboard';
 
 import { LaunchesData } from './types';
 
-interface DashboardContainerProps extends RouteComponentProps {}
-
 const GET_LAUNCHES = gql`
   {
     launchesPast(limit: 10) {
@@ -27,7 +25,7 @@ const Container = styled(CenteredContainer)`
   width: 50%;
 `;
 
-const DashboardContainer: React.FC<DashboardContainerProps> = () => {
+const DashboardContainer: React.FC<RouteComponentProps> = () => {
   const { loading, error, data } = useQuery<LaunchesData>(GET_LAUNCHES);
   const navigate = useNavigate();
   const onNavigate = (path: string) => {

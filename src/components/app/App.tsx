@@ -1,9 +1,9 @@
-import React from "react";
-import { Router, Redirect } from "@reach/router";
-import styled from "styled-components";
+import React from 'react';
+import { Router, Redirect } from '@reach/router';
+import styled from 'styled-components';
 
-import Dashboard from "../dashboard";
-import Launch from "../launch";
+import Dashboard from '../dashboard';
+import Launch from '../launch';
 
 const App = ({ className }: { className?: string }) => {
   return (

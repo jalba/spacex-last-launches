@@ -1,1 +1,1 @@
-export { default } from "./centered-container";
+export { default } from './centered-container';

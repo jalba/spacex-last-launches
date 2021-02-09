@@ -1,18 +1,18 @@
-import React from "react";
-import { Card, CardContent, CardActions, Button } from "@material-ui/core";
-import styled from "styled-components";
+import React from 'react';
+import { Card, CardContent, CardActions, Button } from '@material-ui/core';
+import styled from 'styled-components';
 
-import ImageViewer from "./image-viewer";
-import BoldTypography from "../common/bold-typography";
+import ImageViewer from './image-viewer';
+import BoldTypography from '../common/bold-typography';
 
-import { Launch as LaunchData, Links } from "./types";
+import { Launch as LaunchData, Links } from './types';
 
 interface LaunchProps {
   data?: LaunchData;
 }
 
 const StyledCard = styled(Card)`
-  width: "100%";
+  width: '100%';
 `;
 
 const CenteredCardActions = styled(CardActions)`
@@ -27,16 +27,16 @@ const CenteredCardActions = styled(CardActions)`
 `;
 
 const getLink = (links?: Links) => {
-  let link = "";
+  let link = '';
 
   if (links) {
     const { article_link, video_link, wikipedia } = links;
 
-    if (typeof article_link === "string") {
+    if (typeof article_link === 'string') {
       link = article_link;
-    } else if (typeof video_link === "string") {
+    } else if (typeof video_link === 'string') {
       link = video_link;
-    } else if (typeof wikipedia === "string") {
+    } else if (typeof wikipedia === 'string') {
       link = wikipedia;
     }
   }
@@ -57,15 +57,15 @@ const Launch: React.FC<LaunchProps> = ({ data }) => {
         <BoldTypography variant="h5" gutterBottom>
           {data?.mission_name}
         </BoldTypography>
-        {data?.details || "No details provided"}
+        {data?.details || 'No details provided'}
       </CardContent>
       <CenteredCardActions>
         <Button
           color="primary"
           variant="contained"
-          disabled={!Boolean(link)}
+          disabled={!link}
           href={link}
-          title={link ? "Follow link" : "No link available"}
+          title={link ? 'Follow link' : 'No link available'}
         >
           See more
         </Button>

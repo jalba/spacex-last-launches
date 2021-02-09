@@ -1,1 +1,1 @@
-export { default } from "./bold-typography";
+export { default } from './bold-typography';
