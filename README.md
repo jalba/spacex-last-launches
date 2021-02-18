@@ -1,5 +1,10 @@
 # SpaceX Last Launches
 
+A learning project to get familiar with using GraphQL and Apollo Client in a React app.
+The app uses the SpaceX GraphQL api to display a list of the latest mission launches, and when clicking in one of the items it will navigate to that launch page.
+
+More information about the SpaceX GraphQL api [here](https://api.spacex.land/graphql/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Installing the app
@@ -34,11 +39,10 @@ Besides the required tech (React, GraphQL, Apollo client, etc), the rest of the 
 - Date-fns: great library to work with dates. So far, the best one I've used, and far better than having to parse the date object "by hand"
 
 
-## With a bit more time
+## With a bit more time (to-dos for the next version)
 
 - First I think I might try to add more tests. The ones in the application now are a bit basic and it could definitely use some that test more complex interactions and edge cases. It would also be great to add some end-to-end testing for those interactions. I really enjoy working with Cypress
 
 - I would learn more about GraphQL to be more confident in the patterns I used to handle the data
 
 - Review more thoroughly the code to see if I've abstracted everything I can into common components or utility functions,to make the code as DRY as possible
-
